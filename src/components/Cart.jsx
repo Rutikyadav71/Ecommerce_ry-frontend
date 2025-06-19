@@ -274,7 +274,7 @@ const Cart = () => {
   useEffect(() => {
     const fetchImagesAndUpdateCart = async () => {
       try {
-        const response = await axios.get("http://localhost:8080/api/products");
+        const response = await axios.get("http://steadfast-enthusiasm-production.up.railway.app/api/products");
         const backendProductIds = response.data.map((product) => product.id);
   
         const updatedCartItems = cart.filter((item) =>
@@ -285,7 +285,7 @@ const Cart = () => {
           updatedCartItems.map(async (item) => {
             try {
               const response = await axios.get(
-                `http://localhost:8080/api/product/${item.id}/image`,
+                `http://steadfast-enthusiasm-production.up.railway.app/api/product/${item.id}/image`,
                 { responseType: "blob" }
               );
   
@@ -369,7 +369,7 @@ const Cart = () => {
           new Blob([JSON.stringify(updatedProductData)], { type: "application/json" })
         );
   
-        await axios.put(`http://localhost:8080/api/product/${item.id}`, formData, {
+        await axios.put(`http://steadfast-enthusiasm-production.up.railway.app/api/product/${item.id}`, formData, {
           headers: { "Content-Type": "multipart/form-data" },
         });
   
