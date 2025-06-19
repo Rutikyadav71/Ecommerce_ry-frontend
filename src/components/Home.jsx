@@ -23,7 +23,7 @@ const Home = ({ selectedCategory }) => {
           data.map(async (product) => {
             try {
               const response = await axios.get(
-                `http://steadfast-enthusiasm-production.up.railway.app/api/product/${product.id}/image`,
+                `https://steadfast-enthusiasm-production.up.railway.app/api/product/${product.id}/image`,
                 { responseType: "blob" }
               );
               const imageUrl = URL.createObjectURL(response.data);

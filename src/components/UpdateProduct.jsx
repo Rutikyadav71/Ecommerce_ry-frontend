@@ -22,13 +22,13 @@ const UpdateProduct = () => {
     const fetchProduct = async () => {
       try {
         const response = await axios.get(
-          `http://steadfast-enthusiasm-production.up.railway.app/api/product/${id}`
+          `https://steadfast-enthusiasm-production.up.railway.app/api/product/${id}`
         );
 
         setProduct(response.data);
       
         const responseImage = await axios.get(
-          `http://steadfast-enthusiasm-production.up.railway.app/api/product/${id}/image`,
+          `https://steadfast-enthusiasm-production.up.railway.app/api/product/${id}/image`,
           { responseType: "blob" }
         );
        const imageFile = await converUrlToFile(responseImage.data,response.data.imageName)
@@ -67,7 +67,7 @@ const UpdateProduct = () => {
 
   console.log("formData : ", updatedProduct)
     axios
-      .put(`http://steadfast-enthusiasm-production.up.railway.app/api/product/${id}`, updatedProduct, {
+      .put(`https://steadfast-enthusiasm-production.up.railway.app/api/product/${id}`, updatedProduct, {
         headers: {
           "Content-Type": "multipart/form-data",
         },

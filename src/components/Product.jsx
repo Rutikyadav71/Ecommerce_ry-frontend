@@ -16,7 +16,7 @@ const Product = () => {
     const fetchProduct = async () => {
       try {
         const response = await axios.get(
-          `http://steadfast-enthusiasm-production.up.railway.app/api/product/${id}`
+          `https://steadfast-enthusiasm-production.up.railway.app/api/product/${id}`
         );
         setProduct(response.data);
         if (response.data.imageName) {
@@ -29,7 +29,7 @@ const Product = () => {
 
     const fetchImage = async () => {
       const response = await axios.get(
-        `http://steadfast-enthusiasm-production.up.railway.app/api/product/${id}/image`,
+        `https://steadfast-enthusiasm-production.up.railway.app/api/product/${id}/image`,
         { responseType: "blob" }
       );
       setImageUrl(URL.createObjectURL(response.data));
@@ -40,7 +40,7 @@ const Product = () => {
 
   const deleteProduct = async () => {
     try {
-      await axios.delete(`http://steadfast-enthusiasm-production.up.railway.app/api/product/${id}`);
+      await axios.delete(`https://steadfast-enthusiasm-production.up.railway.app/api/product/${id}`);
       removeFromCart(id);
       console.log("Product deleted successfully");
       alert("Product deleted successfully");

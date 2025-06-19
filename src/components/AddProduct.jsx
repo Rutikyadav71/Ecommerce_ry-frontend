@@ -34,7 +34,7 @@ const AddProduct = () => {
     );
 
     axios
-      .post("http://steadfast-enthusiasm-production.up.railway.app/api/product", formData, {
+      .post("https://steadfast-enthusiasm-production.up.railway.app/api/product", formData, {
         headers: {
           "Content-Type": "multipart/form-data",
         },
