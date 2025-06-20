@@ -1,8 +1,60 @@
-# React + Vite
+# 🛒 E-commerce Website — Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+> A dynamic and responsive E-commerce frontend built using **React**, **Bootstrap 5**, and connected to a **Spring Boot** REST API backend.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🌐 Live Demo
+
+🔗 [Live Site](https://ecommerce-ry-frontend.vercel.app/)
+
+---
+
+## 📸 Screenshots
+
+![Home Page](public/homepage.png)  
+![Product page](public/product.png)  
+![Cart Page](public/cart.png)
+
+---
+
+## ⚙️ Features
+
+- 🏬 Browse all products  
+- 🔍 Search and filter products  
+- ➕ Add to cart  
+- 🛒 Manage shopping cart items  
+- 🧾 Checkout (with placeholder logic or integrated backend)  
+- 📤 Upload product with image (admin)  
+- 🚦 Update product availability  
+- 📱 Fully responsive layout  
+
+---
+
+## 🔧 Tech Stack
+
+**Frontend:**  
+- React  
+- Axios  
+- Bootstrap 5  
+- React Router
+
+**Backend:**  
+- Spring Boot (REST API)
+
+**Deployment:**  
+- Frontend: [Vercel](https://vercel.com/)  
+- Backend: [Railway](https://railway.app/)
+
+**Database:**  
+- MySQL (hosted on Railway)
+
+---
+
+## 🚀 How to Run Locally
+
+```bash
+git clone https://github.com/your-username/ecommerce-frontend.git
+cd ecommerce-frontend
+npm install
+npm start
